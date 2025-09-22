@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandReach - Beat Brigade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo-removebg-preview.png" alt="HandReach Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="account.html" class="dropbtn">Account</a>
+                        <div class="dropdown-content">
+                            <a href="account-sign-up.html">Sign Up</a>
+                            <a href="account-login.html">Login</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropbtn">About</a>
+                        <div class="dropdown-content">
+                            <a href="about-history.html">History</a>
+                            <a href="about-people.html">People</a>
+                            <a href="about-faq.html">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="initiatives.html" class="dropbtn">Initiatives</a>
+                        <div class="dropdown-content">
+                            <a href="initiatives-beat-brigade.html">Beat Brigade</a>
+                            <a href="initiatives-general-education-fund.html">General Education Fund</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="get-involved.html" class="dropbtn">Get Involved</a>
+                        <div class="dropdown-content">
+                            <a href="get-involved-events.html">Events</a>
+                            <a href="get-involved-volunteer.html">Volunteer</a>
+                            <a href="get-involved-host-your-own-event.html">Host Your Own Event</a>
+                            <a href="get-involved-current-campaign-links.html">Current Campaign Links</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="btn-donate">DONATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Beat Brigade</h1>
+
+        <section class="hero-image-section">
+            <img src="images/beat-brigade-hero.jpg" alt="Hands drumming on various drums" class="hero-image">
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">What is the Beat Brigade?</h2>
+            <p>The HandReach Beat Brigade is an outreach program that formed to provide significant training and experience in therapeutic drumming for youth and adults from diverse backgrounds, who travel locally and abroad to facilitate healing drum circles for trauma survivors. Formed under the leadership of Bill Jenkins in Washington, DC, and now settled in Boston under the direction of drummer Martin Isaac, the Beat Brigade serves as a learning laboratory for musicians, healers, youth, and trauma survivors of all ages to explore modalities of healing through rhythm and song.</p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Stories from the Field</h2>
+            <p>In a society in which traditional family and community-based systems of support have become increasingly fragmented, drumming circles provide a sense of connectedness with others and interpersonal support. A drum circle provides an opportunity to connect with your own spirit at a deeper level, and also to connect with a group of other like-minded people.</p>
+            <h3 class="subsection-title">Testimonials</h3>
+            <div class="testimonial-box">
+                <p>"Drumming is the most amazing modality. As a physical therapist with 30 years of experience, from my perspective, drumming has the potential to transcend language, culture and age to motivate patients to combat devastating Injuries. The benefits of music include mood alteration; auditory distraction; and physiology which promotes cues for movement. While working in China last summer, I witnessed music motivate a Tibetan girl with a spinal cord injury to participate in physical therapy while overcoming pain and fear of movement. This experience left me forever changed and a believer in the power of music as a modality for inclusion in a therapeutic repertoire."</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">How to Get Involved</h2>
+            <p>The HandReach BeatBrigade welcomes new members! Anyone in the Boston area with an interest in drumming, art therapy, or working with trauma survivors, domestically or internationally, is encouraged to join us!</p>
+            <p>Our current activities and training sessions are posted at: <a href="http://www.meetup.com/HandReach-BeatBrigade/" target="_blank">Meetup.com/HandReach-BeatBrigade</a></p>
+            <p>To inquire about presenting at a Beat Brigade meeting or hiring the Beat Brigade for an event, please contact the Program Coordinator at <a href="mailto:brecken@handreach.org">brecken@handreach.org</a></p>
+            <p>Check out Beat Brigade on <a href="https://www.facebook.com/HandReachBeatBrigade" target="_blank">Facebook</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top-row">
+                <div class="footer-badges">
+                    <img src="images/awards-removebg-preview.png" alt="Top Rated" class="badge-image">
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/HandReach" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/#!/HandReach" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <a href="http://www.linkedin.com/groups/HandReach-3105961" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="footer-bottom-row">
+                <div class="footer-contact">
+                    <p>Address: PO Box 763 | East Falmouth, Massachusetts 02536<br>Tel: (978) 621-5677<br>Created by Jeanne Harran</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-main">
+            <p>&copy; <span id="copyright-year"></span> HandReach. All rights reserved. | <a href="A_Lovell_Site_Documentation.docx" class="documentation-link" target="_blank">Site Documentation</a></p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatables = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatables.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandReach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo-removebg-preview.png" alt="HandReach Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="account.html" class="dropbtn">Account</a>
+                        <div class="dropdown-content">
+                            <a href="account-sign-up.html">Sign Up</a>
+                            <a href="account-login.html">Login</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropbtn">About</a>
+                        <div class="dropdown-content">
+                            <a href="about-history.html">History</a>
+                            <a href="about-people.html">People</a>
+                            <a href="about-faq.html">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="initiatives.html" class="dropbtn">Initiatives</a>
+                        <div class="dropdown-content">
+                            <a href="initiatives-beat-brigade.html">Beat Brigade</a>
+                            <a href="initiatives-general-education-fund.html">General Education Fund</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="get-involved.html" class="dropbtn">Get Involved</a>
+                        <div class="dropdown-content">
+                            <a href="get-involved-events.html">Events</a>
+                            <a href="get-involved-volunteer.html">Volunteer</a>
+                            <a href="get-involved-host-your-own-event.html">Host Your Own Event</a>
+                            <a href="get-involved-current-campaign-links.html">Current Campaign Links</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="btn-donate">DONATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1>About HandReach</h1>
+        
+        <section class="content-section">
+            <div class="content-with-image">
+                <img src="images/history.jpeg" alt="Group of people" class="hero-image-left">
+                <div>
+                    <p>HandReach envisions a world where no child is denied a full education or a chance at life. However, millions of children in the developing world are kept back from school and a future because they have suffered a debilitating injury – a burn or amputation. The world's poorest children are at the highest risk of these sudden, life-changing trauma injuries that happen in a second without warning but often bankrupt poor families and leave children crippled, dependent, and homebound for life.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Global Healing</h2>
+            <div class="content-with-image">
+                <img src="images/founder.png" alt="Founder" class="hero-image-left">
+                <div>
+                    <p>HandReach is working to make the world's best practices in pediatric burn and orthopedic care available to children who are in need of surgery or rehabilitation therapy that their families cannot afford. We facilitate international clinics, sponsor training, develop technological resources, and arrange for the donation of needed equipment and supplies so that institutions can maximize their ability to treat complex injuries and promote full rehabilitation for children, regardless of income. We advocate to promote greater access to integrated rehabilitative care, and a place in society for trauma survivors that includes greater access and acceptance for people with physical differences.</p>
+                </div>
+            </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top-row"> 
+                <div class="footer-badges">
+                    <img src="images/awards-removebg-preview.png" alt="Top Rated" class="badge-image">
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/HandReach" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/#!/HandReach" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <a href="http://www.linkedin.com/groups/HandReach-3105961" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="footer-bottom-row"> 
+                <div class="footer-contact">
+                    <p>Address: PO Box 763 | East Falmouth, Massachusetts 02536<br>Tel: (978) 621-5677<br>Created by Jeanne Harran</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-main">
+            <p>&copy; <span id="copyright-year"></span> HandReach. All rights reserved. | <a href="A_Lovell_Site_Documentation.docx" class="documentation-link" target="_blank">Site Documentation</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatables = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatables.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

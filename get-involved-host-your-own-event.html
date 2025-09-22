@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandReach - Host Your Own Event</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo-removebg-preview.png" alt="HandReach Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="account.html" class="dropbtn">Account</a>
+                        <div class="dropdown-content">
+                            <a href="account-sign-up.html">Sign Up</a>
+                            <a href="account-login.html">Login</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropbtn">About</a>
+                        <div class="dropdown-content">
+                            <a href="about-history.html">History</a>
+                            <a href="about-people.html">People</a>
+                            <a href="about-faq.html">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="initiatives.html" class="dropbtn">Initiatives</a>
+                        <div class="dropdown-content">
+                            <a href="initiatives-beat-brigade.html">Beat Brigade</a>
+                            <a href="initiatives-general-education-fund.html">General Education Fund</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="get-involved.html" class="dropbtn">Get Involved</a>
+                        <div class="dropdown-content">
+                            <a href="get-involved-events.html">Events</a>
+                            <a href="get-involved-volunteer.html">Volunteer</a>
+                            <a href="get-involved-host-your-own-event.html">Host Your Own Event</a>
+                            <a href="get-involved-current-campaign-links.html">Current Campaign Links</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="btn-donate">DONATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-event-section">
+            <img src="images/host-event-hero.jpg" alt="People gathering for an event" class="hero-event-image">
+        </section>
+
+        <section class="content-section event-intro">
+            <div class="event-intro-text">
+                <h1>Join The Cause</h1>
+                <p>Want to help HandReach, but don't know how? It's easy help us fundraise by hosting your own event! There's no better way to combine your interests and your passion for helping others!</p>
+                <p>Just follow this simple checklist to help you begin planning your own fundraising event.</p>
+            </div>
+        </section>
+
+        <section class="content-section event-checklist">
+            <ol>
+                <li>
+                    <h3>Determine your level of commitment and what kind of event is appropriate for you.</h3>
+                    <p>Whether you'd like to host a small dinner party or organize a 5-K fun run, any fundraiser that you undertake will have time and effort commitments that you will need to prepare for.</p>
+                </li>
+                <li>
+                    <h3>Outline your goals.</h3>
+                    <p>How much money are you looking to raise? How many people do you want to attend? What kind of people do you want to attend? How much time and effort do you want to invest in the event?</p>
+                </li>
+                <li>
+                    <h3>Research your local area.</h3>
+                    <p>Most venues and businesses offer free or discounted services and sponsorship to non-profits for their events. Find out what is available for non-profit fundraisers near you!</p>
+                </li>
+                <li>
+                    <h3>Enlist assistance.</h3>
+                    <p>Our volunteers at HandReach want your event to go smoothly. We'll provide the necessary documentation that you'll need to get started soliciting corporate business. In the meantime, you should begin recruiting other local volunteers to assist you with your event.</p>
+                </li>
+                <li>
+                    <h3>Spread the word.</h3>
+                    <p>Whether you want to invite 1 or 1,000 participants, you'll need to get the word out about the event! Utilizing social media sites (such as Facebook, Twitter, etc.) is a free and easy way to draw attention to your upcoming function.</p>
+                </li>
+                <li>
+                    <h3>Enjoy your event!</h3>
+                    <p>After the event is complete, just send HandReach the check!</p>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top-row">
+                <div class="footer-badges">
+                    <img src="images/awards-removebg-preview.png" alt="Top Rated" class="badge-image">
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/HandReach" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://x.com/#!/HandReach" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <a href="http://www.linkedin.com/groups/HandReach-3105961" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="footer-bottom-row">
+                <div class="footer-contact">
+                    <p>Address: PO Box 763 | East Falmouth, Massachusetts 02536<br>Tel: (978) 621-5677<br>Created by Jeanne Harran</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-main">
+            <p>&copy; <span id="copyright-year"></span> HandReach. All rights reserved. | <a href="A_Lovell_Site_Documentation.docx" class="documentation-link" target="_blank">Site Documentation</a></p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatables = document.querySelectorAll('.scroll-animate');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatables.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

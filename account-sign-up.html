@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - HandReach</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for signup.html */
+        .signup-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .signup-container h1 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .social-signup-buttons button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            color: white; /* Default text color */
+        }
+
+        .social-signup-buttons button i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .social-signup-buttons button.google {
+            background-color: #DB4437; /* Google red */
+        }
+
+        .social-signup-buttons button.microsoft {
+            background-color: #0078D4; /* Microsoft blue */
+        }
+
+        .social-signup-buttons button.github {
+            background-color: #333; /* GitHub black */
+        }
+
+        .social-signup-buttons button.twitter {
+            background-color: #1DA1F2; /* Twitter blue */
+        }
+
+        .social-signup-buttons button.facebook {
+            background-color: #1877F2; /* Facebook blue */
+        }
+
+        .social-signup-buttons button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .or-separator {
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            color: #777;
+        }
+
+        .or-separator::before,
+        .or-separator::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: #ddd;
+            margin: 0 10px;
+        }
+
+        .signup-form .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        .signup-form input[type="text"]:focus,
+        .signup-form input[type="email"]:focus,
+        .signup-form input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .signup-form button[type="submit"] {
+            background-color: #28a745; /* Green for submit */
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .signup-form button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .login-link {
+            margin-top: 25px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo-removebg-preview.png" alt="HandReach Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="account.html" class="dropbtn">Account</a>
+                        <div class="dropdown-content">
+                            <a href="account-sign-up.html">Sign Up</a> <a href="account-login.html">Login</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropbtn">About</a>
+                        <div class="dropdown-content">
+                            <a href="about-history.html">History</a>
+                            <a href="about-people.html">People</a>
+                            <a href="about-faq.html">FAQ</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="initiatives.html" class="dropbtn">Initiatives</a>
+                        <div class="dropdown-content">
+                            <a href="initiatives-beat-brigade.html">Beat Brigade</a>
+                            <a href="initiatives-general-education-fund.html">General Education Fund</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="get-involved.html" class="dropbtn">Get Involved</a>
+                        <div class="dropdown-content">
+                            <a href="get-involved-events.html">Events</a>
+                            <a href="get-involved-volunteer.html">Volunteer</a>
+                            <a href="get-involved-host-your-own-event.html">Host Your Own Event</a>
+                            <a href="get-involved-current-campaign-links.html">Current Campaign Links</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="btn-donate">DONATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="signup-container">
+            <h1>Create Your HandReach Account</h1>
+
+            <div class="social-signup-buttons">
+                <button class="google">
+                    <i class="fab fa-google"></i> Sign up with Google
+                </button>
+                <button class="microsoft">
+                    <i class="fab fa-microsoft"></i> Sign up with Microsoft
+                </button>
+                <button class="github">
+                    <i class="fab fa-github"></i> Sign up with GitHub
+                </button>
+                <button class="twitter">
+                    <i class="fab fa-twitter"></i> Sign up with Twitter (X)
+                </button>
+                <button class="facebook">
+                    <i class="fab fa-facebook-f"></i> Sign up with Facebook
+                </button>
+            </div>
+
+            <div class="or-separator">OR</div>
+
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <div class="login-link">
+                Already have an account? <a href="account-login.html">Log in here</a>.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top-row">
+                <div class="footer-badges">
+                    <img src="images/awards-removebg-preview.png" alt="Top Rated" class="badge-image">
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/HandReach" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://twitter.com/HandReach" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <a href="http://www.linkedin.com/groups/HandReach-3105961" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="footer-bottom-row">
+                <div class="footer-contact">
+                    <p>Address: PO Box 763 | East Falmouth, Massachusetts 02536<br>Tel: (978) 621-5677<br>Created by Jeanne Harran</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-main">
+            <p>&copy; <span id="copyright-year"></span> HandReach. All rights reserved. | <a href="A_Lovell_Site_Documentation.docx" class="documentation-link" target="_blank">Site Documentation</a></p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
